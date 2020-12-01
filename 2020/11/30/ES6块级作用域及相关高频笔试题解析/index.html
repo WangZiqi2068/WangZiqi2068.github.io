@@ -5,15 +5,17 @@
   
 
   
-  <title>Ziqi&#39;s</title>
+  <title>ES6块级作用域 | Ziqi&#39;s</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="web study">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ziqi&#39;s">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="1. 概述1.1 变量的作用域 ES6之前，变量的作用域只有两种： 局部作用域：只能在当前函数内部使用 全局作用域：可以在任意函数内使用——是全局对象的成员   ES6中，增加了一种变量作用域： 块级作用域：只能在当前块内使用1.2 为什么要用块级作用域   变量提升，内层变量覆盖外层变量  12345678var i &#x3D; 10;function func() &amp;#123;  console.lo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6块级作用域">
+<meta property="og:url" content="http://example.com/2020/11/30/ES6%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%AB%98%E9%A2%91%E7%AC%94%E8%AF%95%E9%A2%98%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="Ziqi&#39;s">
-<meta property="og:description" content="web study">
+<meta property="og:description" content="1. 概述1.1 变量的作用域 ES6之前，变量的作用域只有两种： 局部作用域：只能在当前函数内部使用 全局作用域：可以在任意函数内使用——是全局对象的成员   ES6中，增加了一种变量作用域： 块级作用域：只能在当前块内使用1.2 为什么要用块级作用域   变量提升，内层变量覆盖外层变量  12345678var i &#x3D; 10;function func() &amp;#123;  console.lo">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-30T07:40:00.167Z">
+<meta property="article:modified_time" content="2020-12-01T07:25:49.549Z">
 <meta property="article:author" content="WangZiqi">
 <meta name="twitter:card" content="summary">
   
@@ -64,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-ES6块级作用域及相关高频笔试题解析" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ES6块级作用域及相关高频笔试题解析" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/30/ES6%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%AB%98%E9%A2%91%E7%AC%94%E8%AF%95%E9%A2%98%E8%A7%A3%E6%9E%90/" class="article-date">
   <time datetime="2020-11-30T07:40:00.167Z" itemprop="datePublished">2020-11-30</time>
@@ -79,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/30/ES6%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%AB%98%E9%A2%91%E7%AC%94%E8%AF%95%E9%A2%98%E8%A7%A3%E6%9E%90/">ES6块级作用域</a>
+    <h1 class="article-title" itemprop="name">
+      ES6块级作用域
     </h1>
   
 
@@ -156,156 +156,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-ES中对象的属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/27/ES%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-11-27T05:25:49.870Z" itemprop="datePublished">2020-11-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/27/ES%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7/">ES Attribute</a>
-    </h1>
+    <a href="/2020/11/27/ES%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ES Attribute</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-属性分类"><a href="#1-属性分类" class="headerlink" title="1. 属性分类"></a>1. 属性分类</h1><ul>
-<li>ES中的对象，就是属性的集合</li>
-<li>属性分为两类：<ul>
-<li>命名属性：<ul>
-<li>数据属性</li>
-<li>访问器属性</li>
-</ul>
-</li>
-<li>内部属性（ES内部定义）<h1 id="2-数据属性"><a href="#2-数据属性" class="headerlink" title="2. 数据属性"></a>2. 数据属性</h1></li>
-</ul>
-</li>
-<li>数据属性就是专门存储对象的一个属性值的属性</li>
-<li>数据属性可以在创建对象时就定义好，也可以在创建完对象后，采用赋值方式增加新数据属性，添加的属性随时可以修改、遍历</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建对象时定义数据类型</span></span><br><span class="line"><span class="keyword">var</span> person=&#123;</span><br><span class="line">  name:<span class="string">&quot;Tom&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//通过赋值方式添加新属性</span></span><br><span class="line">person.age=<span class="number">20</span>;</span><br></pre></td></tr></table></figure>
-<h1 id="3-属性的特性"><a href="#3-属性的特性" class="headerlink" title="3. 属性的特性"></a>3. 属性的特性</h1><h2 id="3-1-属性的特性及获取属性的特性"><a href="#3-1-属性的特性及获取属性的特性" class="headerlink" title="3.1 属性的特性及获取属性的特性"></a>3.1 属性的特性及获取属性的特性</h2><ul>
-<li>数据属性有四个特性来保护自己不被随意修改、遍历<ul>
-<li>value: 实际存储属性值的特性</li>
-<li>writable: 表示能否修改属性的value值。默认为true。如果设置为false则为只读属性</li>
-<li>enumerable: 表示是否能通过for…in循环遍历到该属性。默认为true</li>
-<li>configurable: 表示是否能通过delete删除该属性，或者能否修改其他特性。默认为true，如果改为false，则属性的其他特性一旦定义就不可修改</li>
-</ul>
-</li>
-<li>属性的特性无法直接访问。使用Object.getOwnPropertyDesciptor方法可以查看指定对象、指定属性的特性</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyDescriptor(person,<span class="string">&quot;name&quot;</span>));</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20201127122832434.jpg#pic_center" alt="通过浏览器查看到的特性"></p>
-<h2 id="3-2-设置属性的特性"><a href="#3-2-设置属性的特性" class="headerlink" title="3.2 设置属性的特性"></a>3.2 设置属性的特性</h2><ul>
-<li>通过Object.defineProperty方法修改属性的特性</li>
-<li>增加数据属性，同时定义属性的特性：<br>  语法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">&quot;属性值&quot;</span>,&#123;</span><br><span class="line">	&amp;emsp;value:属性值,</span><br><span class="line">	&amp;emsp;write:<span class="literal">true</span>/<span class="literal">false</span></span><br><span class="line">	...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
-<li>如果指定的属性名已存在，则直接修改原属性的特性</li>
-<li>Object.defineProperty方法一次只能添加或者设置一个属性，Object.defineProperties方法，一次可以设置多个属性<h2 id="3-3-用Object-defineProperty设置属性特性"><a href="#3-3-用Object-defineProperty设置属性特性" class="headerlink" title="3.3 用Object.defineProperty设置属性特性"></a>3.3 用Object.defineProperty设置属性特性</h2></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> eric=&#123;</span><br><span class="line">     eid:<span class="number">1001</span>, <span class="comment">//只读</span></span><br><span class="line">     ename:<span class="string">&quot;艾力克&quot;</span>,  <span class="comment">//禁止删除</span></span><br><span class="line">     salary:<span class="number">12000</span>  <span class="comment">//禁止遍历</span></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="built_in">Object</span>.defineProperty(eric,<span class="string">&quot;eid&quot;</span>,&#123;</span><br><span class="line">     writable:<span class="literal">false</span>,</span><br><span class="line">     configurable:<span class="literal">false</span></span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="built_in">Object</span>.defineProperty(eric,<span class="string">&quot;ename&quot;</span>,&#123;</span><br><span class="line">     configurable:<span class="literal">false</span></span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="built_in">Object</span>.defineProperty(eric,<span class="string">&quot;salary&quot;</span>,&#123;</span><br><span class="line">     enumerable:<span class="literal">false</span>,</span><br><span class="line">     configurable:<span class="literal">false</span></span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="3-4-用Object-defineProperties设置属性特性"><a href="#3-4-用Object-defineProperties设置属性特性" class="headerlink" title="3.4 用Object.defineProperties设置属性特性"></a>3.4 用Object.defineProperties设置属性特性</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.defineProperties(eric,&#123;</span><br><span class="line">     eid:&#123;</span><br><span class="line">       writable:<span class="literal">false</span>,</span><br><span class="line">       configurable:<span class="literal">false</span></span><br><span class="line">     &#125;,</span><br><span class="line">     ename:&#123;</span><br><span class="line">       configurable:<span class="literal">false</span></span><br><span class="line">     &#125;,</span><br><span class="line">     salary:&#123;</span><br><span class="line">       enumerable:<span class="literal">false</span>,</span><br><span class="line">       configurable:<span class="literal">false</span></span><br><span class="line">     &#125;</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
-<h1 id="4-访问器属性"><a href="#4-访问器属性" class="headerlink" title="4. 访问器属性"></a>4. 访问器属性</h1><h2 id="4-1-访问器属性的相关概念"><a href="#4-1-访问器属性的相关概念" class="headerlink" title="4.1 访问器属性的相关概念"></a>4.1 访问器属性的相关概念</h2><ul>
-<li>访问器属性是专门控制对一个数据属性<strong>读写操作</strong>的特殊属性。它不包含具体的属性值，而是包含一对儿get/set方法</li>
-<li>访问器属性不能直接定义，只能通过Object.defineProperty/Object.defineProperties方法<h2 id="4-2-访问器属性的特性"><a href="#4-2-访问器属性的特性" class="headerlink" title="4.2 访问器属性的特性"></a>4.2 访问器属性的特性</h2></li>
-<li>访问器属性没有value和writable特性</li>
-<li>访问器属性的特性：<ul>
-<li>get：读取属性时自动调用的函数。如果不提供，表示不可读取受保护的属性值</li>
-<li>set: 写入属性值自动调用的函数。如果不提供，表示受保护的属性为只读属性</li>
-<li>enumerable: 表示是否能通过for…in循环遍历到该属性。默认为true</li>
-<li>configurable: 表示是否能通过delete删除该属性，或者能否修改其他特性。默认为true，如果改为false，则属性的其他特性一旦定义就不可修改<h2 id="4-3-访问器属性的用法示例"><a href="#4-3-访问器属性的用法示例" class="headerlink" title="4.3 访问器属性的用法示例"></a>4.3 访问器属性的用法示例</h2></li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> eric=&#123;</span><br><span class="line">  ename:<span class="string">&quot;艾力克&quot;</span>,</span><br><span class="line">  eage:<span class="number">25</span></span><br><span class="line">  <span class="comment">//年龄属性可以修改，但是必须介于18~65之间</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperties(eric,&#123;</span><br><span class="line">  _eage:&#123;</span><br><span class="line">    value:eric.eage,</span><br><span class="line">    writable:<span class="literal">true</span></span><br><span class="line">    <span class="comment">//这里enumerable和configurable特性默认为false，可以省略不写</span></span><br><span class="line">  &#125;,</span><br><span class="line">  eage:&#123;</span><br><span class="line">    get:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">this</span>._eage;</span><br><span class="line">    &#125;,</span><br><span class="line">    set:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(value&gt;=<span class="number">18</span> &amp;&amp; value&lt;=<span class="number">65</span>)&#123;</span><br><span class="line">        <span class="built_in">this</span>._eage=value;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="string">&quot;年龄必须介于18~65岁之间&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    enumerable:<span class="literal">true</span>,</span><br><span class="line">    configurable:<span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(eric.eage);<span class="comment">//25</span></span><br><span class="line">eric.eage=<span class="number">18</span>;</span><br><span class="line"><span class="built_in">console</span>.log(eric.eage);<span class="comment">//18</span></span><br><span class="line">eric.eage=<span class="number">16</span>;</span><br><span class="line"><span class="built_in">console</span>.log(eric.eage);<span class="comment">//超出范围，报错</span></span><br></pre></td></tr></table></figure>
-<p>注意：</p>
-<ul>
-<li>凡是用对象字面量创建添加的属性，其属性的特性值默认都是true；</li>
-<li>使用defineProperty添加的属性，其属性的特性值默认都是false。<h1 id="5-内部属性"><a href="#5-内部属性" class="headerlink" title="5. 内部属性"></a>5. 内部属性</h1></li>
-<li>内部属性是ES内部定义，用于描述对象特定情况下的行为</li>
-<li>比如：<ul>
-<li>继承：__ <em>proto</em> __应用当前对象继承的原型对象</li>
-<li>可扩展：Extensible表示是否能为对象扩展新属性</li>
-<li>class属性：对象的类型名。不能直接访问，而是通过强行调用Object.prototype.toString()方法打印出来。</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/27/ES%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7/" data-id="cki5nqtx40001i8vn1tr2fzwc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/23/hello-world/" class="article-date">
-  <time datetime="2020-11-23T09:56:57.499Z" itemprop="datePublished">2020-11-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/23/hello-world/" data-id="cki5nqtx60002i8vn3txq0jj4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
